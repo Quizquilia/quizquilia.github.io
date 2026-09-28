@@ -4,21 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quizquilia</title>
-<meta name="description" content="Quizquilia – Quizdom is power. Bald geht's los.">
+<meta name="description" content="Quizquilia – Quizdom is power. Starting soon.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   :root { --blau:#1F3A5F; --gold:#E0A526; --creme:#FBF7EF; --grau:#9FB3CC; }
   html,body { margin:0; height:100%; }
   body { background:var(--blau); color:var(--creme); font-family:Futura,"Avenir Next","Century Gothic",system-ui,sans-serif;
          display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 16px; box-sizing:border-box; }
-  img { width:min(640px,100%); height:auto; }
+  .wort { width:min(640px,100%); height:auto; }
+  .signet { position:fixed; top:16px; left:16px; width:64px; height:64px; }
+  .signet img { width:100%; height:100%; display:block; }
   .slogan { color:var(--gold); font-size:1.3rem; letter-spacing:.08em; margin:.5rem 0 1.5rem; }
   .bald { color:var(--grau); font-size:1rem; letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
 <body>
-  <img src="logo.png" alt="Quizquilia">
+  <a class="signet" href="/"><img src="signet.svg" alt="Quizquilia – Startseite"></a>
+  <img class="wort" src="logo.png" alt="Quizquilia">
   <p class="slogan">Quizdom is power.</p>
-  <p class="bald">Bald geht's los</p>
+  <p class="bald">Starting soon</p>
 </body>
 </html>
