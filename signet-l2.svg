@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Logo2 ohne Hintergrundfläche, damit es auf jedem Blau sitzt -->
+  <g transform="translate(200,200) scale(1.75) translate(-207,-202.5)" stroke="#E0A526" stroke-width="16.5" fill="none" stroke-linecap="round">
+    <circle cx="160" cy="170" r="30"/>
+    <path d="M160,200Q190,200,190,216V262"/>
+    <path d="M224,151.5A30,30,0,1,1,254,200Q224,200,224,216V230"/>
+    <circle cx="224" cy="262" r="11.25" fill="#E0A526" stroke="none"/>
+  </g>
+</svg>
