@@ -13,10 +13,10 @@
          display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 16px; box-sizing:border-box; }
   .signet { position:fixed; top:16px; left:16px; width:120px; display:block; }
   .signet svg { width:100%; height:auto; display:block; }
-  .wort { width:min(640px,100%); height:auto; }
-  .slogan { color:var(--gold); font-size:1rem; font-weight:500; letter-spacing:.4em; margin:1.5rem 0 2.5rem; }
-  .slogan .c { color:var(--creme); }
-  .bald { color:var(--grau); font-size:1rem; letter-spacing:.2em; text-transform:uppercase; }
+  .kopf { width:min(640px,100%); }
+  .wort, .slogan { width:100%; height:auto; display:block; }
+  .slogan { margin:.6rem 0 2.5rem; }
+  .bald { color:var(--grau); font-size:.8rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -31,8 +31,13 @@
       <text x="48" y="388" textLength="300" lengthAdjust="spacing" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="34" fill="#9FB3CC">QUIZQUILIA.DE</text>
     </svg>
   </a>
-  <img class="wort" src="wortmarke-p3b.png" alt="Quizquilia">
-  <p class="slogan"><span class="c">q</span>uizdom is <span class="c">p</span>ower</p>
+  <div class="kopf">
+    <img class="wort" src="wortmarke-p3b.png" alt="Quizquilia">
+    <!-- gleiche Breite wie die Wortmarke: im 900er-Bild reicht sie von x≈212 bis x≈690 -->
+    <svg class="slogan" viewBox="0 0 900 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="quizdom is power">
+      <text x="212" y="50" textLength="478" lengthAdjust="spacing" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="42" fill="#E0A526"><tspan fill="#FBF7EF">q</tspan>uizdom is <tspan fill="#FBF7EF">p</tspan>ower</text>
+    </svg>
+  </div>
   <p class="bald">Starting soon</p>
 </body>
 </html>
