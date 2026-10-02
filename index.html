@@ -13,9 +13,14 @@
          display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 16px; box-sizing:border-box; }
   .signet { position:fixed; top:16px; left:16px; width:120px; display:block; }
   .signet svg { width:100%; height:auto; display:block; }
-  .kopf { width:min(640px,100%); }
-  .wort, .slogan { width:100%; height:auto; display:block; }
-  .slogan { margin:.6rem 0 2.5rem; }
+  .kopf { width:min(480px,100%); overflow:hidden; }
+  /* das PNG ist 900 breit, die Wortmarke reicht nur von x≈212 bis x≈690: Rand wegschneiden */
+  .wort { width:188.3%; margin-left:-44.4%; height:auto; display:block; }
+  .slogan { width:100%; height:auto; display:block; margin:.4rem 0 2.5rem; }
+  @media (max-width:600px) {
+    .signet { position:static; width:84px; margin:0 auto 2rem; }
+    .signet svg text { display:none; }
+  }
   .bald { position:fixed; left:0; right:0; bottom:40px; margin:0; color:var(--grau); font-size:.8rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; }
 </style>
 </head>
@@ -34,7 +39,7 @@
   <div class="kopf">
     <img class="wort" src="wortmarke-p3b.png" alt="Quizquilia">
     <!-- gleiche Breite wie die Wortmarke: im 900er-Bild reicht sie von x≈212 bis x≈690 -->
-    <svg class="slogan" viewBox="0 0 900 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="quizdom is power">
+    <svg class="slogan" viewBox="208 0 486 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="quizdom is power">
       <text x="213" y="50" textLength="477" lengthAdjust="spacing" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="42" fill="#E0A526"><tspan fill="#FBF7EF">q</tspan>uizdom is <tspan fill="#FBF7EF">p</tspan>ower</text>
     </svg>
   </div>
