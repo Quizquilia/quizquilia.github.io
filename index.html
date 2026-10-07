@@ -11,16 +11,19 @@
   html,body { margin:0; height:100%; }
   body { background:var(--blau); font-family:Futura,"Avenir Next","Century Gothic",system-ui,sans-serif;
          display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 16px; box-sizing:border-box; }
-  .signet { position:fixed; top:16px; left:16px; width:120px; display:block; }
+  .signet { position:fixed; top:16px; left:16px; width:240px; display:block; }
   .signet svg { width:100%; height:auto; display:block; }
   .kopf { width:min(480px,100%); overflow:hidden; }
   /* das PNG ist 900 breit, die Wortmarke reicht nur von x≈212 bis x≈690: Rand wegschneiden */
   .wort { width:188.3%; margin-left:-44.4%; height:auto; display:block; }
   .slogan { width:100%; height:auto; display:block; margin:.4rem 0 2.5rem; }
-  @media (max-width:600px) {
-    .signet { position:static; width:84px; margin:0 auto 2rem; }
+  /* doppelt so großes Signet überlappt sonst die Wortmarke auf Tablets/kleinen Laptops */
+  @media (max-width:1100px), (max-height:760px) {
+    .signet { position:static; width:168px; margin:0 auto 2rem; }
     .signet svg text { display:none; }
   }
+  /* Handy quer: sonst passt es nicht in die Höhe */
+  @media (max-height:500px) { .signet { width:84px; margin-bottom:1rem; } }
   .bald { position:fixed; left:0; right:0; bottom:40px; margin:0; color:var(--grau); font-size:.8rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; }
 </style>
 </head>
