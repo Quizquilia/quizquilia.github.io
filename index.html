@@ -40,7 +40,8 @@
     <img class="wort" src="wortmarke-p3b.png" alt="Quizquilia">
     <!-- gleiche Breite wie die Wortmarke: im 900er-Bild reicht sie von x≈212 bis x≈690 -->
     <svg class="slogan" viewBox="208 0 486 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="quizdom is power">
-      <text x="213" y="50" textLength="477" lengthAdjust="spacing" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="42" fill="#E0A526"><tspan fill="#FBF7EF">q</tspan>uizdom is <tspan fill="#FBF7EF">p</tspan>ower</text>
+      <!-- feste x je Buchstabe statt textLength: Safari auf iOS verschiebt tspans bei textLength nicht mit -->
+      <text y="50" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="42" fill="#E0A526"><tspan x="213" fill="#FBF7EF">q</tspan><tspan x="247.8 279.9 299.5 331.5 365.9 400.3">uizdom</tspan><tspan x="464.9 484.5">is</tspan><tspan x="532.8" fill="#FBF7EF">p</tspan><tspan x="567.2 600.8 641.9 674.3">ower</tspan></text>
     </svg>
   </div>
   <p class="bald">Starting soon</p>
