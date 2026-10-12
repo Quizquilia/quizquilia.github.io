@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% include signet.html %}
+  {% include kopf.html %}
+  <main class="liste">
+    {% if site.posts.size > 0 %}
+    <ul>
+      {% for post in site.posts limit: 20 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{% include datum.html datum=post.date %}</time>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="bald">Bald mehr.</p>
+    {% endif %}
+  </main>

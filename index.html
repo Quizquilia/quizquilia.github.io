@@ -1,52 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quizquilia</title>
-<meta name="description" content="Quizquilia – quizdom is power. Starting soon.">
-<link rel="icon" href="signet-l2.png" type="image/png">
-<style>
-  :root { --blau:#19375F; /* exakt der Hintergrund von wortmarke-p3b.png */ --gold:#E0A526; --creme:#FBF7EF; --grau:#9FB3CC; }
-  html,body { margin:0; height:100%; }
-  body { background:var(--blau); font-family:Futura,"Avenir Next","Century Gothic",system-ui,sans-serif;
-         display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 16px; box-sizing:border-box; }
-  .signet { position:fixed; top:16px; left:16px; width:240px; display:block; }
-  .signet svg { width:100%; height:auto; display:block; }
-  .kopf { width:min(480px,100%); overflow:hidden; }
-  /* das PNG ist 900 breit, die Wortmarke reicht nur von x≈212 bis x≈690: Rand wegschneiden */
-  .wort { width:188.3%; margin-left:-44.4%; height:auto; display:block; }
-  .slogan { width:100%; height:auto; display:block; margin:.4rem 0 2.5rem; }
-  /* doppelt so großes Signet überlappt sonst die Wortmarke auf Tablets/kleinen Laptops */
-  @media (max-width:1100px), (max-height:760px) {
-    .signet { position:static; width:168px; margin:0 auto 2rem; }
-    .signet svg text { display:none; }
-  }
-  /* Handy quer: sonst passt es nicht in die Höhe */
-  @media (max-height:500px) { .signet { width:84px; margin-bottom:1rem; } }
-  .bald { position:fixed; left:0; right:0; bottom:40px; margin:0; color:var(--grau); font-size:.8rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; }
-</style>
-</head>
-<body>
-  <a class="signet" href="/" aria-label="Quizquilia – home">
-    <svg viewBox="40 65 316 330" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(200,200) scale(1.75) translate(-207,-202.5)" stroke="#E0A526" stroke-width="16.5" fill="none" stroke-linecap="round">
-        <circle cx="160" cy="170" r="30"/>
-        <path d="M160,200Q190,200,190,216V262"/>
-        <path d="M224,151.5A30,30,0,1,1,254,200Q224,200,224,216V230"/>
-        <circle cx="224" cy="262" r="11.25" fill="#E0A526" stroke="none"/>
-      </g>
-      <text x="48" y="388" textLength="300" lengthAdjust="spacing" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="34" fill="#9FB3CC">QUIZQUILIA</text>
-    </svg>
-  </a>
-  <div class="kopf">
-    <img class="wort" src="wortmarke-p3b.png" alt="Quizquilia">
-    <!-- gleiche Breite wie die Wortmarke: im 900er-Bild reicht sie von x≈212 bis x≈690 -->
-    <svg class="slogan" viewBox="208 0 486 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="quizdom is power">
-      <!-- feste x je Buchstabe statt textLength: Safari auf iOS verschiebt tspans bei textLength nicht mit -->
-      <text y="50" font-family="Futura,'Avenir Next',sans-serif" font-weight="500" font-size="42" fill="#E0A526"><tspan x="213" fill="#FBF7EF">q</tspan><tspan x="247.8 279.9 299.5 331.5 365.9 400.3">uizdom</tspan><tspan x="464.9 484.5">is</tspan><tspan x="532.8" fill="#FBF7EF">p</tspan><tspan x="567.2 600.8 641.9 674.3">ower</tspan></text>
-    </svg>
-  </div>
-  <p class="bald">Starting soon</p>
-</body>
-</html>
+---
+layout: home
+body_class: startseite
+title: Quizquilia
+---
