@@ -1,0 +1,27 @@
+title: Quizquilia
+description: "Quizquilia – quizdom is power. Quizideen, Fragenreihen und Projekte."
+lang: de
+url: "https://quizquilia.de"
+permalink: /:year/:month/:title/
+timezone: Europe/Berlin
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "" , type: posts }
+    values: { layout: post, body_class: beitrag }
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - BLOGGEN.md
+  - README.md
+  - vendor
+  - CNAME_NOTE
